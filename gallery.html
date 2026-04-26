@@ -202,14 +202,20 @@
       .masonry {
         grid-template-columns: 1fr 1fr !important;
         gap: 0.6rem !important;
-        }
+      }
+      .masonry-item {
+        height: 200px !important;
+        margin-top: 0 !important;  /* ← tambah ini */
+      }
       .masonry-item:nth-child(1),
       .masonry-item:nth-child(3) {
-        height: 220px !important;
-        }
-      .masonry-item:nth-child(5) {
-        grid-column: 2 !important;
-        grid-row: 2 !important;
+        height: 200px !important;
+      }
+      .masonry-item:nth-child(4),
+      .masonry-item:nth-child(5),
+      .masonry-item:nth-child(6) {
+        grid-column: auto !important;
+        grid-row: auto !important;
         margin-top: 0 !important;
       }
     }
