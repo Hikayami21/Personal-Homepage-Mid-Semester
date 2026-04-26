@@ -199,8 +199,19 @@
     }
 
     @media (max-width: 768px) {
-      .gallery-hero { padding: 0 1.5rem 3rem; }
-      .masonry { columns: 2 180px; }
+      .masonry {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.6rem !important;
+        }
+      .masonry-item:nth-child(1),
+      .masonry-item:nth-child(3) {
+        height: 220px !important;
+        }
+      .masonry-item:nth-child(5) {
+        grid-column: 2 !important;
+        grid-row: 2 !important;
+        margin-top: 0 !important;
+      }
     }
   </style>
 </head>
