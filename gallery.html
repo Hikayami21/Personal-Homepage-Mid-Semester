@@ -15,7 +15,6 @@
       padding-top: var(--nav-height);
       border-bottom: 1px solid var(--border);
     }
-    /* Filter Tabs */
     .filter-tabs {
       display: flex;
       gap: 0.8rem;
@@ -38,8 +37,6 @@
       border-color: var(--accent-gold);
       color: var(--accent-gold);
     }
-
-    /* Masonry Grid */
    .masonry {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -111,8 +108,7 @@
       text-transform: uppercase;
       color: var(--accent-gold);
     }
-
-    /* Placeholder cards */
+    
     .photo-placeholder {
       width: 100%;
       background: linear-gradient(135deg, #111, #0e0e0e);
@@ -132,13 +128,12 @@
     .photo-placeholder svg {
       width: 36px; height: 36px;
       stroke: var(--text-muted); fill: none; stroke-width: 1;
-    }
-    /* Different heights for masonry feel */
+    }    
+    
     .ph-tall { min-height: 320px; }
     .ph-medium { min-height: 220px; }
     .ph-short { min-height: 160px; }
 
-    /* Lightbox */
     #lightbox {
       position: fixed;
       inset: 0;
@@ -186,7 +181,6 @@
       color: var(--accent-gold);
     }
 
-    /* Empty notice */
     .gallery-notice {
       text-align: center;
       padding: 5rem 2rem;
@@ -325,7 +319,6 @@
     });
   });
 
-  // Lightbox - only for real images, not placeholders
   const lightbox = document.getElementById('lightbox');
   const lbImg    = document.getElementById('lightbox-img');
   const lbCap    = document.getElementById('lightbox-caption');

@@ -1,11 +1,5 @@
-/* ================================================
-   DANIELLE GODWIN KAWULUSAN - PORTFOLIO
-   style.css - Global Stylesheet
-   ================================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 
-/* ── CSS Variables ── */
 :root {
   --bg-dark: #080808;
   --bg-card: #0e0e0e;
@@ -27,7 +21,6 @@
   --nav-height: 72px;
 }
 
-/* ── Reset & Base ── */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -49,7 +42,6 @@ body {
   cursor: none;
 }
 
-/* ── Custom Cursor ── */
 .cursor {
   width: 10px;
   height: 10px;
@@ -79,7 +71,6 @@ body {
 body:hover .cursor { opacity: 1; }
 a:hover ~ .cursor, button:hover ~ .cursor { transform: translate(-50%, -50%) scale(2); }
 
-/* ── Background Image (Shared) ── */
 .bg-mask-layer {
   position: fixed;
   inset: 0;
@@ -101,7 +92,6 @@ a:hover ~ .cursor, button:hover ~ .cursor { transform: translate(-50%, -50%) sca
   -webkit-user-drag: none;
 }
 
-/* ── Grain overlay ── */
 .grain-overlay {
   position: fixed;
   inset: 0;
@@ -112,7 +102,6 @@ a:hover ~ .cursor, button:hover ~ .cursor { transform: translate(-50%, -50%) sca
   background-size: 128px 128px;
 }
 
-/* ── Navigation ── */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -175,14 +164,12 @@ nav {
   transform: scaleX(1);
 }
 
-/* ── Page Wrapper ── */
 .page-wrapper {
   position: relative;
   z-index: 2;
   min-height: 100vh;
 }
 
-/* ── Section Utilities ── */
 .section {
   padding: 7rem 3.5rem;
   max-width: 1200px;
@@ -223,7 +210,6 @@ nav {
   margin: 2rem 0;
 }
 
-/* ── Buttons ── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -261,7 +247,6 @@ nav {
   transform: translateX(0);
 }
 
-/* ── Cards ── */
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -290,18 +275,15 @@ nav {
   height: 100%;
 }
 
-/* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg-dark); }
 ::-webkit-scrollbar-thumb { background: var(--accent-gold-dim); border-radius: 2px; }
 
-/* ── Selection ── */
 ::selection {
   background: rgba(201, 169, 110, 0.25);
   color: var(--accent-gold);
 }
 
-/* ── Page Fade In ── */
 .page-content {
   opacity: 0;
   animation: pageFadeIn 1.2s ease 0.3s forwards;
@@ -312,7 +294,6 @@ nav {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Reveal on scroll ── */
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -323,7 +304,6 @@ nav {
   transform: translateY(0);
 }
 
-/* ── Gold line decoration ── */
 .gold-line {
   display: flex;
   align-items: center;
@@ -337,7 +317,6 @@ nav {
   background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
 }
 
-/* ── Footer ── */
 footer {
   border-top: 1px solid var(--border);
   padding: 2.5rem 3.5rem;
@@ -359,7 +338,6 @@ footer a {
 }
 footer a:hover { color: var(--accent-gold); }
 
-/* ── Responsive Nav ── */
 .nav-toggle {
   display: none;
   flex-direction: column;

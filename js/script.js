@@ -1,9 +1,3 @@
-/* ================================================
-   DANIELLE GODWIN KAWULUSAN - PORTFOLIO
-   script.js - Global JavaScript
-   ================================================ */
-
-/* ── Custom Cursor ── */
 const cursor = document.querySelector('.cursor');
 const cursorRing = document.querySelector('.cursor-ring');
 
@@ -41,7 +35,6 @@ if (cursor && cursorRing) {
   });
 }
 
-/* ── Active Nav Link ── */
 (function setActiveNav() {
   const path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(link => {
@@ -52,7 +45,6 @@ if (cursor && cursorRing) {
   });
 })();
 
-/* ── Mobile Nav Toggle ── */
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks  = document.querySelector('.nav-links');
 if (navToggle && navLinks) {
@@ -69,7 +61,6 @@ if (navToggle && navLinks) {
   });
 }
 
-/* ── Scroll Reveal ── */
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
@@ -82,7 +73,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-/* ── Parallax bg-mask ── */
 const bgImg = document.querySelector('.bg-mask-layer img');
 if (bgImg) {
   window.addEventListener('scroll', () => {
@@ -91,7 +81,6 @@ if (bgImg) {
   }, { passive: true });
 }
 
-/* ── Typed text effect (used on Home) ── */
 function typedText(el, texts, speed = 80, pause = 2000) {
   if (!el) return;
   let tIdx = 0, cIdx = 0, deleting = false;
@@ -118,7 +107,6 @@ function typedText(el, texts, speed = 80, pause = 2000) {
   tick();
 }
 
-/* ── Contact Form ── */
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {

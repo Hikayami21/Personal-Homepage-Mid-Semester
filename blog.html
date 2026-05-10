@@ -16,7 +16,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* Category nav */
     .cat-nav {
       display: flex;
       gap: 0.6rem;
@@ -40,7 +39,6 @@
       color: var(--accent-gold);
     }
 
-    /* Featured post */
     .post-featured {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -100,7 +98,6 @@
       margin-bottom: 1.8rem;
     }
 
-    /* Blog grid */
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -183,7 +180,6 @@
     }
     .read-more:hover { gap: 0.9rem; }
 
-    /* Article modal / expanded view */
     #article-modal {
       position: fixed;
       inset: 0;
@@ -291,7 +287,6 @@
 
   <section class="section">
 
-    <!-- Category nav -->
     <div class="cat-nav reveal">
       <button class="cat-btn active" data-cat="all">All</button>
       <button class="cat-btn" data-cat="ai">🤖 AI & Tech</button>
@@ -301,7 +296,6 @@
       <button class="cat-btn" data-cat="olahraga">🏐 Olahraga</button>
     </div>
 
-    <!-- FEATURED -->
     <div class="post-featured reveal" data-cat="ai" id="ai-teknologi">
       <div class="post-featured-img" style="padding: 0; overflow: hidden;">
         <img src="https://cdn.mos.cms.futurecdn.net/DVffQnnibMWmNpx2Wfb5Se-1920-80.jpg" alt="AI"
@@ -316,7 +310,6 @@
       </div>
     </div>
 
-    <!-- GRID -->
     <div class="blog-grid">
 
       <div class="blog-card reveal" data-cat="gamedev" id="game-dev">
@@ -395,7 +388,6 @@
   </section>
 </div>
 
-<!-- Article Modal -->
 <div id="article-modal">
   <button class="article-close" onclick="closeArticle()">✕ Tutup</button>
   <div class="article-inner" id="article-content"></div>
@@ -408,7 +400,7 @@
 
 <script src="js/script.js"></script>
 <script>
-// ── Article content ──
+
 const articles = {
   ai: {
     tag: '🤖 AI & Technology',
@@ -597,7 +589,6 @@ function closeArticle() {
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
 
-// Category filter
 document.querySelectorAll('.cat-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
@@ -610,7 +601,6 @@ document.querySelectorAll('.cat-btn').forEach(btn => {
   });
 });
 
-// Deep link support
 if (window.location.hash) {
   const id = window.location.hash.slice(1);
   const articleMap = {
